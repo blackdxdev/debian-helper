@@ -10,8 +10,7 @@ deine Packete installieren.
 
 Du musst einfach nur die Datei runterladen, und dies eingeben.
 ```bash
-  chmod 777 debian-helper.sh
-  ./debian-helper.sh
+  bash <(curl -s https://raw.githubusercontent.com/blackdxdev/debian-helper/main/debian-helper.sh)
 ```
 
 
