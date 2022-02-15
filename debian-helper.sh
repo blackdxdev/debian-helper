@@ -181,15 +181,6 @@ Alias /phpmyadmin /usr/share/phpmyadmin
             fi
 
             if [ $options == "4" ]; then
-            echo "Installiere MariaDB" | lolcat
-            #mariaDB installation
-            apt install mariadb-server mariadb-client -y
-            sleep 1;
-            mysql_secure_installation
-            echo "MariaDB erfolgreich installiert" | lolcat
-            fi
-
-            if [ $options == "5" ]; then
             echo "Installiere MongoDB" | lolcat
             #Installation
             wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
@@ -208,7 +199,7 @@ Alias /phpmyadmin /usr/share/phpmyadmin
             echo "MongoDB erfolgreich installiert" | lolcat
             fi
 
-            if [ $options == "6" ]; then
+            if [ $options == "5" ]; then
             echo "Installiere Redis (Server)" | lolcat
             sudo apt update
             sudo apt install redis-server
@@ -234,7 +225,7 @@ supervised systemd
             fi
 done
 
-if [ $options == "7" ]; then
+if [ $options == "6" ]; then
             echo "Installiere Docker" | lolcat
             #Installation / #Credits Docker.com
             sudo apt-get remove docker docker-engine docker.io containerd runc
@@ -257,5 +248,11 @@ if [ $options == "7" ]; then
 
 
             echo "Docker erfolgreich installiert & alte versionen entfernt" | lolcat
+            fi
+done
+if [ $options == "7" ]; then
+            echo "Installiere Java" | lolcat
+            sleep 3
+            echo "Uppps! Das ist noch nicht fertig :P" | lolcat
             fi
 done
